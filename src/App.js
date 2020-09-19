@@ -1,11 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+import Home from './components/Home/Home';
 
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-      <h1>Welcome to hostair app, here you can find your house dream</h1>
+      <Router>
+        <Home/>
+        <Switch>
+          <Route path='/' />
+        </Switch>
+      </Router>
+
     </div>
   );
 }
